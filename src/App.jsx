@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useMovies } from './hooks/useMovies.js'
-import { Movies } from './components/Movies.jsx'
+import { Movies } from './components/movies.jsx'
 import './App.css'
 import { useEffect } from 'react'
 
