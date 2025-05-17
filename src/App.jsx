@@ -33,7 +33,7 @@ function App() {
   return (
     <div className="page">
       <header>
-        <h1>Buscador de peliculas</h1>
+        <h1>MovieQuest</h1>
         <form className="form" onSubmit={handleSubmit}>
           <input value={query} onChange={handleChange} placeholder="Insterstellar, Star Wars, Avengers ..." />
           <button>Search</button>
