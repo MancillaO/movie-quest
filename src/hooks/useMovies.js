@@ -2,25 +2,21 @@ import { useState } from 'react'
 import { searchMovies } from '../services/movies.js'
 
 export function useMovies({ search }) {
-  const [responseMovies, setResponseMovies] = useState([])
-
-  const movies = responseMovies.Search || []
-
-  const mappedMovies = movies.map((movie) => ({
-    id: movie.imdbID,
-    title: movie.Title,
-    year: movie.Year,
-    poster: movie.Poster
-  }))
+  const [movies, setMovies] = useState([])
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState(null)
 
   const getMovies = async () => {
-    if (search) {
-      const movies = await searchMovies({ search })
-      setResponseMovies(movies)
-    } else {
-      setResponseMovies([])
+    try {
+      setLoading(true)
+      const newMovies = await searchMovies({ search })
+      setMovies(newMovies)
+    } catch (error) {
+      setError(error.message)
+    } finally {
+      setLoading(false)
     }
   }
 
-  return { movies: mappedMovies, getMovies }
+  return { movies, getMovies, error, loading }
 }

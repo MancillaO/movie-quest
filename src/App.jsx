@@ -5,7 +5,7 @@ import './App.css'
 
 function App() {
   const { search, updateSearch, error } = useSearch()
-  const { movies, getMovies } = useMovies({ search })
+  const { movies, getMovies, loading } = useMovies({ search })
 
   const handleSubmit = (event) => {
     event.preventDefault()
@@ -23,15 +23,13 @@ function App() {
       <header>
         <h1>MovieQuest</h1>
         <form className="form" onSubmit={handleSubmit}>
-          <input value={search} onChange={handleChange}placeholder="Insterstellar, Star Wars, Avengers ..." />
+          <input value={search} onChange={handleChange} placeholder="Insterstellar, Star Wars, Avengers ..." />
           <button>Search</button>
         </form>
         {error && <p className="error">{error}</p>}
       </header>
 
-      <main>
-        <Movies movies={movies} />
-      </main>
+      <main>{loading ? <p>Loading...</p> : <Movies movies={movies} />}</main>
     </div>
   )
 }
