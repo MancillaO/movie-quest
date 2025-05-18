@@ -1,7 +1,9 @@
-import responseMovies from '../mocks/with-results.json'
-// import responseMovies from '../mocks/without-results.json'
+import { useState } from 'react'
+import { searchMovies } from '../services/movies.js'
 
-export function useMovies() {
+export function useMovies({ search }) {
+  const [responseMovies, setResponseMovies] = useState([])
+
   const movies = responseMovies.Search || []
 
   const mappedMovies = movies.map((movie) => ({
@@ -11,5 +13,14 @@ export function useMovies() {
     poster: movie.Poster
   }))
 
-  return { movies: mappedMovies }
+  const getMovies = async () => {
+    if (search) {
+      const movies = await searchMovies({ search })
+      setResponseMovies(movies)
+    } else {
+      setResponseMovies([])
+    }
+  }
+
+  return { movies: mappedMovies, getMovies }
 }
