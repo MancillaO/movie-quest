@@ -1,30 +1,21 @@
-import { useState } from 'react'
 import { useMovies } from './hooks/useMovies.js'
+import { useSearch } from './hooks/useSearch.js'
 import { Movies } from './components/movies.jsx'
 import './App.css'
 
 function App() {
-  const { movies } = useMovies()
-  const [query, setQuery] = useState('')
-  const [error, setError] = useState(null)
-  // const API_PREFIX = 'https://www.omdbapi.com/'
+  const { search, updateSearch, error } = useSearch()
+  const { movies, getMovies, loading } = useMovies({ search })
 
   const handleSubmit = (event) => {
     event.preventDefault()
-    console.log(query)
+    getMovies()
   }
 
   const handleChange = (event) => {
-    setQuery(event.target.value)
-    if (query === '') {
-      setError('No se puede buscar una pelicula vacia')
-      return
-    }
-    if (query.match(/^\d+$/)) {
-      setError('No se puede buscar una pelicula con solo numeros')
-      return
-    }
-    setError(null)
+    const newSearch = event.target.value
+    if (newSearch.startsWith(' ')) return
+    updateSearch(newSearch)
   }
 
   return (
@@ -32,15 +23,13 @@ function App() {
       <header>
         <h1>MovieQuest</h1>
         <form className="form" onSubmit={handleSubmit}>
-          <input value={query} onChange={handleChange} placeholder="Insterstellar, Star Wars, Avengers ..." />
+          <input value={search} onChange={handleChange} placeholder="Insterstellar, Star Wars, Avengers ..." />
           <button>Search</button>
         </form>
-        {error && <p style={{ color: 'tomato' }}>{error}</p>}
+        {error && <p className="error">{error}</p>}
       </header>
 
-      <main>
-        <Movies movies={movies} />
-      </main>
+      <main>{loading ? <p>Loading...</p> : <Movies movies={movies} />}</main>
     </div>
   )
 }
