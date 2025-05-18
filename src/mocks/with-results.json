@@ -1,76 +1,76 @@
 {
-"Search": [
-{
-"Title": "The Avengers",
-"Year": "2012",
-"imdbID": "tt0848228",
-"Type": "movie",
-"Poster": "https://m.media-amazon.com/images/M/MV5BNGE0YTVjNzUtNzJjOS00NGNlLTgxMzctZTY4YTE1Y2Y1ZTU4XkEyXkFqcGc@._V1_SX300.jpg"
-},
-{
-"Title": "Avengers: Endgame",
-"Year": "2019",
-"imdbID": "tt4154796",
-"Type": "movie",
-"Poster": "https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_SX300.jpg"
-},
-{
-"Title": "Avengers: Infinity War",
-"Year": "2018",
-"imdbID": "tt4154756",
-"Type": "movie",
-"Poster": "https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_SX300.jpg"
-},
-{
-"Title": "Avengers: Age of Ultron",
-"Year": "2015",
-"imdbID": "tt2395427",
-"Type": "movie",
-"Poster": "https://m.media-amazon.com/images/M/MV5BODBhYTg1NGQtNGVmNS00ZTdiLThjYTYtZDFkNzRiNTZmNDZjXkEyXkFqcGc@._V1_SX300.jpg"
-},
-{
-"Title": "The Avengers",
-"Year": "1998",
-"imdbID": "tt0118661",
-"Type": "movie",
-"Poster": "https://m.media-amazon.com/images/M/MV5BZTA4ZmZlZWQtZDRlYS00ZWZhLTk0MzEtYjExMGIzMTBlZDNlXkEyXkFqcGc@._V1_SX300.jpg"
-},
-{
-"Title": "The Avengers: Earth's Mightiest Heroes",
-"Year": "2010–2024",
-"imdbID": "tt1626038",
-"Type": "series",
-"Poster": "https://m.media-amazon.com/images/M/MV5BY2NkYTNlMTQtZWVjNC00MTk4LTkzNGEtYjAyOTYxYWFjYTVkXkEyXkFqcGc@._V1_SX300.jpg"
-},
-{
-"Title": "Ultimate Avengers: The Movie",
-"Year": "2006",
-"imdbID": "tt0491703",
-"Type": "movie",
-"Poster": "https://m.media-amazon.com/images/M/MV5BMTYyMjk0NTMwMl5BMl5BanBnXkFtZTgwNzY0NjAwNzE@._V1_SX300.jpg"
-},
-{
-"Title": "The Avengers",
-"Year": "1961–1969",
-"imdbID": "tt0054518",
-"Type": "series",
-"Poster": "https://m.media-amazon.com/images/M/MV5BMDhhYWIxMzYtNTY2Zi00MTZiLWI2ZDUtYjNiNTY5YzA5MWNkXkEyXkFqcGc@._V1_SX300.jpg"
-},
-{
-"Title": "Ultimate Avengers II",
-"Year": "2006",
-"imdbID": "tt0803093",
-"Type": "movie",
-"Poster": "https://m.media-amazon.com/images/M/MV5BZjI3MTI5ZTYtZmNmNy00OGZmLTlhNWMtNjZiYmYzNDhlOGRkL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg"
-},
-{
-"Title": "Avengers Assemble",
-"Year": "2012–2019",
-"imdbID": "tt2455546",
-"Type": "series",
-"Poster": "https://m.media-amazon.com/images/M/MV5BMTY0NTUyMDQwOV5BMl5BanBnXkFtZTgwNjAwMTA0MDE@._V1_SX300.jpg"
-}
-],
-"totalResults": "167",
-"Response": "True"
-}
+  "Search": [
+  {
+  "Title": "Batman Begins",
+  "Year": "2005",
+  "imdbID": "tt0372784",
+  "Type": "movie",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BODIyMDdhNTgtNDlmOC00MjUxLWE2NDItODA5MTdkNzY3ZTdhXkEyXkFqcGc@._V1_SX300.jpg"
+  },
+  {
+  "Title": "The Batman",
+  "Year": "2022",
+  "imdbID": "tt1877830",
+  "Type": "movie",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BMmU5NGJlMzAtMGNmOC00YjJjLTgyMzUtNjAyYmE4Njg5YWMyXkEyXkFqcGc@._V1_SX300.jpg"
+  },
+  {
+  "Title": "Batman v Superman: Dawn of Justice",
+  "Year": "2016",
+  "imdbID": "tt2975590",
+  "Type": "movie",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BZTJkYjdmYjYtOGMyNC00ZGU1LThkY2ItYTc1OTVlMmE2YWY1XkEyXkFqcGc@._V1_SX300.jpg"
+  },
+  {
+  "Title": "Batman",
+  "Year": "1989",
+  "imdbID": "tt0096895",
+  "Type": "movie",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BYzZmZWViM2EtNzhlMi00NzBlLWE0MWEtZDFjMjk3YjIyNTBhXkEyXkFqcGc@._V1_SX300.jpg"
+  },
+  {
+  "Title": "Batman Returns",
+  "Year": "1992",
+  "imdbID": "tt0103776",
+  "Type": "movie",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BZTliMDVkYTktZDdlMS00NTAwLWJhNzYtMWIwMDZjN2ViMGFiXkEyXkFqcGc@._V1_SX300.jpg"
+  },
+  {
+  "Title": "Batman & Robin",
+  "Year": "1997",
+  "imdbID": "tt0118688",
+  "Type": "movie",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BYzU3ZjE3M2UtM2E4Ni00MDI5LTkyZGUtOTFkMGIyYjNjZGU3XkEyXkFqcGc@._V1_SX300.jpg"
+  },
+  {
+  "Title": "Batman Forever",
+  "Year": "1995",
+  "imdbID": "tt0112462",
+  "Type": "movie",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BMTUyNjJhZWItMTZkNS00NDc4LTllNjUtYTg3NjczMzA5ZTViXkEyXkFqcGc@._V1_SX300.jpg"
+  },
+  {
+  "Title": "The Lego Batman Movie",
+  "Year": "2017",
+  "imdbID": "tt4116284",
+  "Type": "movie",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BMTcyNTEyOTY0M15BMl5BanBnXkFtZTgwOTAyNzU3MDI@._V1_SX300.jpg"
+  },
+  {
+  "Title": "Batman: The Animated Series",
+  "Year": "1992–1995",
+  "imdbID": "tt0103359",
+  "Type": "series",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BYjgwZWUzMzUtYTFkNi00MzM0LWFkMWUtMDViMjMxNGIxNDUxXkEyXkFqcGc@._V1_SX300.jpg"
+  },
+  {
+  "Title": "Batman v Superman: Dawn of Justice (Ultimate Edition)",
+  "Year": "2016",
+  "imdbID": "tt18689424",
+  "Type": "movie",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BOTRlNWQwM2ItNjkyZC00MGI3LThkYjktZmE5N2FlMzcyNTIyXkEyXkFqcGdeQXVyMTEyNzgwMDUw._V1_SX300.jpg"
+  }
+  ],
+  "totalResults": "608",
+  "Response": "True"
+  }

@@ -1,11 +1,15 @@
+import { sortMoviesbyLatest } from '../utils/sortMovies.js'
+
 function listMovies({ movies }) {
+  const sortedMovies = sortMoviesbyLatest(movies)
+
   return (
     <ul className="movies">
-      {movies.map((movie) => (
-        <li key={movie.id}>
+      {sortedMovies.map((movie) => (
+        <li key={movie.id} className="movie">
+          <img src={movie.poster} alt={movie.Title} />
           <h3>{movie.title}</h3>
           <p>{movie.year}</p>
-          <img src={movie.poster} alt={movie.Title} />
         </li>
       ))}
     </ul>
@@ -17,5 +21,5 @@ function noMoviesFound() {
 }
 
 export function Movies({ movies }) {
-  return movies ? listMovies({ movies }) : noMoviesFound()
+  return movies.length > 0 ? listMovies({ movies }) : noMoviesFound()
 }

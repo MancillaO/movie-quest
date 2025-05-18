@@ -1,7 +1,13 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
 .page{
+  width: 100%;
+  max-width: 1000px;
   display: flex;
   flex-direction: column;
-  place-items: center;
 }
 
 main{
@@ -12,6 +18,40 @@ main{
 form{
   width: 100%;
   display: flex;
-  justify-content: space-between;
-  place-items: center;
+  gap: .5rem;
+}
+
+form input{
+  width: 100%;
+}
+
+.error{
+  color: tomato;
+  margin-top: 1rem;
+}
+
+.movies{
+  margin-top: 2rem;
+  list-style: none;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.movie{
+  text-align: center;
+}
+
+.movie h3, .movie p{
+  margin: 0;
+}
+
+.movie img {
+  max-width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-top: 1rem;
+
 }
