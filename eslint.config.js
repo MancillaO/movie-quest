@@ -11,7 +11,7 @@ export default [
 
   // Configuración global
   {
-    files: ['**/*.{js,jsx,ts,tsx}'], // Aplicar a todos los archivos JS y JSX
+    files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       globals: {
         ...globals.browser,
@@ -30,7 +30,7 @@ export default [
 
   // Reglas de estilo Standard (adaptadas manualmente para emular 'standard')
   {
-    files: ['**/*.{js,jsx,ts,tsx}'], // Aplicar a todos los archivos JS y JSX
+    files: ['**/*.{js,jsx,ts,tsx}'],
     rules: {
       // Reglas de formato
       'semi': ['error', 'never'],
@@ -74,7 +74,7 @@ export default [
 
   // Configuración específica para React
   {
-    files: ['**/*.{js,jsx,ts,tsx}'], // Especificar explícitamente para archivos JSX
+    files: ['**/*.{js,jsx,ts,tsx}'],
     plugins: {
       react: reactPlugin,
       'react-hooks': reactHooks,
@@ -82,12 +82,11 @@ export default [
     },
     settings: {
       react: {
-        version: '19' // Lo establecemos como 19 ya que estás usando React 19
+        version: '19'
       }
     },
     rules: {
-      // Reglas de React (ajustadas según tu configuración anterior)
-      'react/jsx-uses-react': 'off', // React 19 no necesita importar React para JSX
+      'react/jsx-uses-react': 'off',
       'react/react-in-jsx-scope': 'off',
       'react/prop-types': 'off', // Desactivado como en tu configuración
       'react/jsx-no-undef': 'error',
