@@ -2,7 +2,6 @@ import { useState } from 'react'
 import { useMovies } from './hooks/useMovies.js'
 import { Movies } from './components/movies.jsx'
 import './App.css'
-import { useEffect } from 'react'
 
 function App() {
   const { movies } = useMovies()
@@ -17,18 +16,16 @@ function App() {
 
   const handleChange = (event) => {
     setQuery(event.target.value)
-  }
-
-  useEffect(() => {
     if (query === '') {
       setError('No se puede buscar una pelicula vacia')
       return
     }
     if (query.match(/^\d+$/)) {
       setError('No se puede buscar una pelicula con solo numeros')
+      return
     }
     setError(null)
-  }, [query])
+  }
 
   return (
     <div className="page">
