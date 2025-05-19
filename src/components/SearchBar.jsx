@@ -1,8 +1,13 @@
-export function SearchBar({ handleSubmit }) {
+export function SearchBar({ handleSubmit, handleChange, search, handleSort, error }) {
   return (
-    <form className="form">
-      <input placeholder="Insterstellar, Star Wars, Avengers ..." />
-      <button onClick={handleSubmit}>Search</button>
-    </form>
+    <>
+      <h1>MovieQuest</h1>
+      <form className="form" onSubmit={handleSubmit}>
+        <input value={search} onChange={handleChange} placeholder="Insterstellar, Star Wars, Avengers ..." />
+        <input type="checkbox" onChange={handleSort} />
+        <button>Search</button>
+      </form>
+      {error && <p className="error">{error}</p>}
+    </>
   )
 }

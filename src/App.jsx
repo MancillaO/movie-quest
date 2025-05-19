@@ -3,6 +3,7 @@ import debounce from 'just-debounce-it'
 import { useMovies } from './hooks/useMovies.js'
 import { useSearch } from './hooks/useSearch.js'
 import { Movies } from './components/movies.jsx'
+import { SearchBar } from './components/SearchBar.jsx'
 import './App.css'
 
 function App() {
@@ -16,7 +17,6 @@ function App() {
 
   const debouncedGetMovies = useCallback(
     debounce((search) => {
-      console.log(search)
       getMovies({ search })
     }, 300),
     [getMovies]
@@ -37,13 +37,13 @@ function App() {
   return (
     <div className="page">
       <header>
-        <h1>MovieQuest</h1>
-        <form className="form" onSubmit={handleSubmit}>
-          <input value={search} onChange={handleChange} placeholder="Insterstellar, Star Wars, Avengers ..." />
-          <input type="checkbox" onChange={handleSort} />
-          <button>Search</button>
-        </form>
-        {error && <p className="error">{error}</p>}
+        <SearchBar
+          handleSubmit={handleSubmit}
+          handleChange={handleChange}
+          search={search}
+          handleSort={handleSort}
+          error={error}
+        />
       </header>
 
       <main>{loading ? <p>Loading...</p> : <Movies movies={movies} />}</main>
