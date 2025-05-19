@@ -17,5 +17,5 @@ function noMoviesFound() {
 }
 
 export function Movies({ movies }) {
-  return movies.length > 0 ? listMovies({ movies }) : noMoviesFound()
+  return movies ? listMovies({ movies }) : noMoviesFound()
 }
