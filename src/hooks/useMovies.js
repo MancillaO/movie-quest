@@ -1,5 +1,5 @@
 import { useState, useRef, useMemo, useCallback } from 'react'
-import { sortMoviesbyLatest } from '../utils/sortMovies.js'
+import { sortMoviesbyLatest, sortByPopularity } from '../utils/sortMovies.js'
 import { searchMovies } from '../services/movies.js'
 
 export function useMovies({ search, sort }) {
@@ -23,7 +23,9 @@ export function useMovies({ search, sort }) {
   }, [])
 
   const sortedMovies = useMemo(() => {
-    return sort ? sortMoviesbyLatest(movies) : movies
+    if (!movies) return null
+    const sortedMovies = sortByPopularity(movies)
+    return sort ? sortMoviesbyLatest(sortedMovies) : sortedMovies
   }, [movies, sort])
 
   return { movies: sortedMovies, getMovies, error, loading }
